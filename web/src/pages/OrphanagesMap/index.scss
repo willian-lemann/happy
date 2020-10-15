@@ -1,0 +1,129 @@
+#page-map {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+    display: flex;
+
+    aside {
+        width: 440px;
+        background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+        padding: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 42px;
+            margin-top: 64px;
+        }
+
+        p {
+            line-height: 28px;
+            margin-top: 24px;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            line-height: 24px;
+
+            strong {
+                font-weight: 800;
+            }
+        }
+    }
+
+    .create-orphanage {
+        position: absolute;
+        right: 40px;
+        bottom: 40px;
+        width: 64px;
+        height: 64px;
+        background-color: #15c3d6;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background 0.3s;
+        z-index: 10;
+        &:hover {
+            background: #17d6eb;
+        }
+    }
+
+    .leaflet-container {
+        z-index: 5;
+    }
+
+    .dark-mode-select {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        height: 100px;
+        width: 100px;
+        display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #ChangeTheme {
+            width: 0;
+            height: 0;
+            opacity: 0;
+        }
+        label {
+            height: 15px;
+            width: 60px;
+
+            transform: translate(0);
+        }
+        span.slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #dadada;
+            border-radius: 30px;
+        }
+        span.slide:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            background: #fff;
+            border-radius: 50%;
+            top: -2px;
+            left: 0px;
+            transition: 0.5s;
+            box-shadow: rgba(0, 0, 0, 0.21) 0px 0px 7px 1px;
+        }
+        .txt {
+            position: relative;
+            transform: translatex(-50px);
+        }
+        .txt p:nth-child(1) {
+            color: grey;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: 0.5s;
+        }
+        #ChangeTheme:checked + span.slide:before {
+            transform: translatex(40px);
+        }
+        /* if dark-mode class is added set this background */
+        body.dark-mode {
+            background: #353535;
+        }
+        .dark-mode .txt p:nth-child(1) {
+            color: #000;
+            font-weight: normal;
+        }
+        .dark-mode .txt p:nth-child(2) {
+            color: grey;
+            font-weight: bold;
+        }
+    }
+}
