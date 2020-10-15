@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  web:
+    build: ./web
+    image: happy_web_image
+    container_name: happy_web_container
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    command: yarn start
+
+  server:
+    build: ./server
+    image: happy_server_image
+    container_name: happy_server_container
+    ports:
+      - "3333:3333"
+    command: yarn start
