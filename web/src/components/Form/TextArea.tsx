@@ -19,7 +19,16 @@ const Input: React.FC<TextAreaProps> = ({ name, ...otherProps }) => {
       })
    }, [fieldName, registerField]);
 
-   return <textarea ref={textAreaRef} {...otherProps} />;
+   return (
+      <>
+         <textarea
+            ref={textAreaRef}
+            style={error ? { borderColor: 'red' } : {}}
+            {...otherProps}
+         />
+         { error && <span style={{ color: 'red' }}>{error}</span>}
+      </>
+   );
 };
 
 export default Input;

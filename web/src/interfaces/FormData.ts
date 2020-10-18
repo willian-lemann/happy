@@ -1,5 +1,3 @@
-import { Image } from './Image';
-
 export interface FormData {
    name: string,
    latitude: number,
@@ -8,5 +6,5 @@ export interface FormData {
    instructions: string,
    opening_hours: string,
    open_on_weekends: boolean,
-   images: Image[]
+   images: File[]
 };

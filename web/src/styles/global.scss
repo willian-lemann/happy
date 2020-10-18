@@ -12,3 +12,10 @@ button,
 textarea {
     font: 600 18px Nunito, sans-serif;
 }
+
+.toast {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

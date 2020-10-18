@@ -19,7 +19,17 @@ const Input: React.FC<InputProps> = ({ name, ...otherProps }) => {
       })
    }, [fieldName, registerField]);
 
-   return <input ref={inputRef} name={name}  {...otherProps} />;
+   return (
+      <>
+         <input
+            ref={inputRef}
+            name={name}
+            style={error ? { borderColor: 'red' } : {}}
+            {...otherProps}
+         />
+         {error && <span style={{ color: 'red' }}>{error}</span>}
+      </>
+   );
 }
 
 export default Input;

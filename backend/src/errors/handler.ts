@@ -1,9 +1,9 @@
 import { ErrorRequestHandler, Request, Response, NextFunction } from 'express';
 import { ValidationError } from 'yup';
 
-interface ValidationErrors {
-    [key: string]: string[]
-}
+    interface ValidationErrors {
+        [key: string]: string[]
+    }
 
 const errorHandler: ErrorRequestHandler = (error, request: Request, response: Response, next: NextFunction) => {
     if (error instanceof ValidationError) {

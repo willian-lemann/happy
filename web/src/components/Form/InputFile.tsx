@@ -23,7 +23,7 @@ const InputFile: React.FC<InputProps> = ({ name, ...otherProps }) => {
             }
          },
          setValue(_: HTMLInputElement, value: any) {
-            
+
          }
       })
    }, [fieldName, registerField]);
@@ -32,7 +32,7 @@ const InputFile: React.FC<InputProps> = ({ name, ...otherProps }) => {
       <>
          <input
             type="file"
-            ref={inputRef}
+            ref={inputRef} 
             {...otherProps}
          />
       </>
