@@ -4,9 +4,15 @@
 
 #### geral
 
+- Manipulação de formulários com unform;
+
 - Validações no formulário com Yup;
 
 - Arquitetura das pastas da aplicação de forma bem organizada e separada. exemplo: criação de uma pasta interfaces para as interfaces que serão utilizadas em toda a aplicação.
+
+- Dockerização da aplicação backende web no Docker.
+
+- Clean Code, Funções com Letra maiúsculas
 
 #### frontend
 
